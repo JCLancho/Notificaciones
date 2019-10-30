@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:id="@+id/Vista">
+
+    <TextView
+        android:id="@+id/lblAcertadas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="72dp"
+        android:text="Operaciones acertadas: "
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/lblAcertadasValor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="0"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/lblAcertadas"
+        app:layout_constraintTop_toTopOf="@+id/lblAcertadas" />
+
+    <EditText
+        android:id="@+id/lblPrimerDigito"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="84dp"
+        android:layout_marginTop="56dp"
+        android:editable="false"
+        android:ems="2"
+        android:focusable="false"
+        android:inputType="number"
+        android:maxLength="3"
+        app:layout_constraintStart_toStartOf="@+id/lblAcertadas"
+        app:layout_constraintTop_toBottomOf="@+id/lblAcertadas" />
+
+    <TextView
+        android:id="@+id/lblSignoOperacion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/lblPrimerDigito"
+        app:layout_constraintStart_toEndOf="@+id/lblPrimerDigito"
+        app:layout_constraintTop_toTopOf="@+id/lblPrimerDigito" />
+
+    <EditText
+        android:id="@+id/lblSegundoDigito"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:clickable="false"
+        android:editable="false"
+        android:ems="2"
+        android:focusable="false"
+        android:inputType="number"
+        android:maxLength="3"
+        app:layout_constraintBottom_toBottomOf="@+id/lblPrimerDigito"
+        app:layout_constraintStart_toEndOf="@+id/lblSignoOperacion"
+        app:layout_constraintTop_toTopOf="@+id/lblPrimerDigito"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/lblSignoIgual"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="="
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/lblSegundoDigito"
+        app:layout_constraintStart_toEndOf="@+id/lblSegundoDigito"
+        app:layout_constraintTop_toTopOf="@+id/lblSegundoDigito" />
+
+    <EditText
+        android:id="@+id/inputSolucion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:ems="2"
+        android:inputType="number"
+        android:maxLength="3"
+        app:layout_constraintBottom_toBottomOf="@+id/lblSegundoDigito"
+        app:layout_constraintStart_toEndOf="@+id/lblSignoIgual"
+        app:layout_constraintTop_toTopOf="@+id/lblSegundoDigito" />
+
+    <Button
+        android:id="@+id/btnComprobar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="116dp"
+        android:text="Comprobar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblSegundoDigito"
+        android:onClick="comprobar"/>
+
+    <Button
+        android:id="@+id/btnNuevaOperacion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="Nueva Operacion"
+        app:layout_constraintEnd_toEndOf="@+id/btnComprobar"
+        app:layout_constraintStart_toStartOf="@+id/btnComprobar"
+        app:layout_constraintTop_toBottomOf="@+id/btnComprobar"
+        android:onClick="generarOperacion"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
