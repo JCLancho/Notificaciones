@@ -84,9 +84,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:ems="2"
-        android:inputType="number"
-        android:maxLength="3"
+        android:ems="3"
+        android:inputType="numberSigned"
+        android:maxLength="4"
         app:layout_constraintBottom_toBottomOf="@+id/lblSegundoDigito"
         app:layout_constraintStart_toEndOf="@+id/lblSignoIgual"
         app:layout_constraintTop_toTopOf="@+id/lblSegundoDigito" />
@@ -102,15 +102,5 @@
         app:layout_constraintTop_toBottomOf="@+id/lblSegundoDigito"
         android:onClick="comprobar"/>
 
-    <Button
-        android:id="@+id/btnNuevaOperacion"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:text="Nueva Operacion"
-        app:layout_constraintEnd_toEndOf="@+id/btnComprobar"
-        app:layout_constraintStart_toStartOf="@+id/btnComprobar"
-        app:layout_constraintTop_toBottomOf="@+id/btnComprobar"
-        android:onClick="generarOperacion"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
